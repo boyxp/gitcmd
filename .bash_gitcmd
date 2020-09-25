@@ -7,6 +7,7 @@ alias gu='git pull'
 alias gac='git_add_commit'
 alias gap='git_add_commit_push'
 alias gd='git_diff'
+alias gr='git remote -v'
 
 function git_branch()
 {
