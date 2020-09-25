@@ -52,6 +52,8 @@ curl -s https://raw.githubusercontent.com/boyxp/gitcmd/master/install.sh | sh
 等于 ```git diff```
 
 ```gd <keyword>```
-等于 ```git diff <keyword>```匹配的文件
+等于```git diff <keyword>```匹配的文件
 
+```gr```
+等于```git remote -v```
 
