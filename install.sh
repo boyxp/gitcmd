@@ -5,6 +5,7 @@ if [ ! -f ~/.bash_gitcmd ]; then
         echo "
 if [ -f ~/.bash_gitcmd ]; then
         . ~/.bash_gitcmd
-fi" >> ~/.bash_profile
+fi
+" >> ~/.bash_profile
 fi
 
