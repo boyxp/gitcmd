@@ -29,7 +29,13 @@ function git_add()
         fi
 
         if [ $# -eq 1 ];then
-                mf=$(git status | grep php | grep : | grep $1 | awk '{print $2}')
+		if [ -f $1 ];then
+			git add $1
+			echo added : $1
+			return
+		fi
+
+		mf=$(git status | grep php | grep : | grep $1 | awk '{print $2}')
                 echo added : $mf
                 git add $mf
         fi
@@ -92,7 +98,12 @@ function git_diff()
         fi
 
         if [ $# -eq 1 ];then
-                mf=$(git status | grep php | grep : | grep $1 | awk '{print $2}')
+		if [ -f $1 ];then
+			git diff $1
+			return
+		fi
+
+		mf=$(git status | grep php | grep : | grep $1 | awk '{print $2}')
                 git diff $mf
         fi
 }
