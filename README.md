@@ -38,7 +38,7 @@ curl -s https://raw.githubusercontent.com/boyxp/gitcmd/master/install.sh | sh
 等于```git add .;git commit -m 'debug'```
 
 ```gac <keyword>```
-等于```git add <keyword>``匹配的文件```;git commit -m 'debug'```
+等于```git add <keyword>```匹配的文件```;git commit -m 'debug'```
 
 ```gac <keyword> <comment>```
 等于```git add <keyword>```匹配的文件```;git commit -m <comment>```
