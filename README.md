@@ -5,6 +5,8 @@ Git快捷命令
 ```
 curl -s https://raw.githubusercontent.com/boyxp/gitcmd/master/install.sh | sh
 ```
+退出服务器重登生效
+
 
 ## 使用方法
 ```gs```
