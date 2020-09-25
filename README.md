@@ -7,49 +7,49 @@ curl -s https://raw.githubusercontent.com/boyxp/gitcmd/master/install.sh | sh
 ```
 
 #使用方法
-gs
+```gs```
 等于git status
 
-gb
+```gb```
 等于git branch
 
-gb <keyword>
+```gb <keyword>```
 以keyword搜索分支并切换
 
-ga
+```ga```
 等于git add .
 
-ga <keyword>
+```ga <keyword>```
 只add匹配keyword的变更文件
 
-gc
+```gc```
 等于git commit -m 'debug'
 
-gc <comment>
+```gc <comment>```
 等于git commit -m <comment>
 
-gp
+```gp```
 等于git push
 
-gu
+```gu```
 等于git pull
 
-gac
+```gac```
 等于git add .;git commit -m 'debug'
 
-gac <keyword>
+```gac <keyword>```
 等于git add <keyword>匹配的文件;git commit -m 'debug'
 
-gac <keyword> <comment>
+```gac <keyword> <comment>```
 等于git add <keyword>匹配的文件;git commit -m <comment>
 
-gap
+```gap```
 等于gac;git push
 
-gd
+```gd```
 等于 git diff
 
-gd <keyword>
+```gd <keyword>```
 等于 git diff <keyword>匹配的文件
 
 
