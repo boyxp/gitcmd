@@ -1,0 +1,99 @@
+alias gs='git status'
+alias gb='git_branch'
+alias ga='git_add'
+alias gc='git_commit'
+alias gp='git push'
+alias gu='git pull'
+alias gac='git_add_commit'
+alias gap='git_add_commit_push'
+alias gd='git_diff'
+
+function git_branch()
+{
+        if [ $# -eq 0 ];then
+                git branch
+        fi
+
+        if [ $# -eq 1 ];then
+                br=$(git branch | grep $1)
+                git checkout $br
+        fi
+}
+
+function git_add()
+{
+        if [ $# -eq 0 ];then
+                mf=$(git status | grep php | grep : | awk '{print $2}')
+                echo added : $mf
+                git add $mf
+        fi
+
+        if [ $# -eq 1 ];then
+                mf=$(git status | grep php | grep : | grep $1 | awk '{print $2}')
+                echo added : $mf
+                git add $mf
+        fi
+}
+
+function git_commit()
+{
+        if [ $# -eq 0 ];then
+                git commit -m 'debug'
+        fi
+
+        if [ $# -eq 1 ];then
+                git commit -m $1
+        fi
+}
+
+function git_add_commit()
+{
+        if [ $# -eq 0 ];then
+                ga
+                gc
+        fi
+
+        if [ $# -eq 1 ];then
+                ga $1
+                gc
+        fi
+
+        if [ $# -eq 2 ];then
+                ga $1
+                gc $2
+        fi
+}
+
+function git_add_commit_push()
+{
+        if [ $# -eq 0 ];then
+                ga
+                gc
+                git push
+        fi
+
+        if [ $# -eq 1 ];then
+                ga $1
+                gc
+                git push
+        fi
+
+        if [ $# -eq 2 ];then
+                ga $1
+                gc $2
+                git push
+        fi
+}
+
+function git_diff()
+{
+        if [ $# -eq 0 ];then
+                git diff
+        fi
+
+        if [ $# -eq 1 ];then
+                mf=$(git status | grep php | grep : | grep $1 | awk '{print $2}')
+                git diff $mf
+        fi
+}
+
