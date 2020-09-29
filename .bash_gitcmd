@@ -16,7 +16,7 @@ function git_branch()
         fi
 
         if [ $# -eq 1 ];then
-                br=$(git branch | grep $1)
+                br=$(git branch | grep $1 | awk '{print $NF}')
                 git checkout $br
         fi
 }
